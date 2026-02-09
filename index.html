@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SportsHub - Your ultimate destination for real-time live score simulations across Football, Basketball, and Tennis.">
+    <title>SportsHub | Live Score Simulation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">
+                <span class="hub-icon">⚡</span> SPORTS<strong>HUB</strong>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#live">Live Scores</a></li>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#news">Latest News</a></li>
+            </ul>
+            <div class="cta-group">
+                <button class="btn btn-outline">Log In</button>
+                <button class="btn btn-primary">Join Pro</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section featuring the Live Score Simulation -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Never Miss a <span class="highlight">Moment.</span></h1>
+                    <p>Experience the heartbeat of the game with our real-time simulation technology. Track every goal, basket, and set as it happens.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large">Start Tracking</button>
+                        <button class="btn btn-secondary btn-large">View Full Schedule</button>
+                    </div>
+                </div>
+
+                <!-- Live Scores Container -->
+                <div class="live-scores-module" id="live-scores-container">
+                    <div class="module-header">
+                        <h2>Current Live Matches</h2>
+                        <div class="live-indicator">
+                            <span class="pulse-dot"></span>
+                            LIVE SIMULATION
+                        </div>
+                    </div>
+
+                    <!-- Match Cards Wrapper (Polite ARIA Live Region) -->
+                    <div class="match-list" id="match-list" aria-live="polite">
+                        <!-- Match Card: Football -->
+                        <div class="match-card" data-sport="Football" id="match-1">
+                            <div class="match-meta">
+                                <span class="sport-label">Football</span>
+                                <span class="match-time">64'</span>
+                            </div>
+                            <div class="score-row">
+                                <div class="team">
+                                    <span class="team-name">Manchester Knights</span>
+                                    <span class="score" id="score-1-a">0</span>
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="team">
+                                    <span class="score" id="score-1-b">1</span>
+                                    <span class="team-name">London Warriors</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Match Card: Basketball -->
+                        <div class="match-card" data-sport="Basketball" id="match-2">
+                            <div class="match-meta">
+                                <span class="sport-label">Basketball</span>
+                                <span class="match-time">Q3 04:12</span>
+                            </div>
+                            <div class="score-row">
+                                <div class="team">
+                                    <span class="team-name">LA Lakers</span>
+                                    <span class="score" id="score-2-a">72</span>
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="team">
+                                    <span class="score" id="score-2-b">68</span>
+                                    <span class="team-name">Boston Celtics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Match Card: Tennis -->
+                        <div class="match-card" data-sport="Tennis" id="match-3">
+                            <div class="match-meta">
+                                <span class="sport-label">Tennis</span>
+                                <span class="match-time">Set 3</span>
+                            </div>
+                            <div class="score-row">
+                                <div class="team">
+                                    <span class="team-name">C. Alcaraz</span>
+                                    <div class="tennis-score">
+                                        <span class="set-history">6 4</span>
+                                        <span class="score" id="score-3-a">30</span>
+                                    </div>
+                                </div>
+                                <div class="separator">VS</div>
+                                <div class="team">
+                                    <div class="tennis-score">
+                                        <span class="score" id="score-3-b">40</span>
+                                        <span class="set-history">4 6</span>
+                                    </div>
+                                    <span class="team-name">N. Djokovic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="module-footer">
+                        <p>Simulated scores update every 15-30 seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features container">
+            <div class="feature-item">
+                <div class="feature-icon">⚽</div>
+                <h3>Football Pro</h3>
+                <p>Track goals, cards, and VAR decisions in high-fidelity simulation.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🏀</div>
+                <h3>Quick Hoops</h3>
+                <p>Fast-paced basketball updates honoring 2pt and 3pt scoring logic.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎾</div>
+                <h3>Court Side</h3>
+                <p>Point-by-point tennis tracking including sets and game advantage.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <div class="logo">SPORTS<strong>HUB</strong></div>
+                <p>The world's leading sports simulation platform.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Sim Engine</a></li>
+                    <li><a href="#">API Docs</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow the Action</h4>
+                <div class="social-icons">
+                    <span>Twitter</span>
+                    <span>Discord</span>
+                    <span>YouTube</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SportsHub Interactive. All simulated scores are for entertainment purposes.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
